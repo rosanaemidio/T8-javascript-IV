@@ -11,7 +11,7 @@ button.addEventListener("click", function( ){
     if(listaFrutas){
         console.log(listaFrutas)
     }else {
-        alert("Esse item não está na lista!")
+        alert(`Não achou o ${valorInput}`)
     }
     
 
