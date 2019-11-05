@@ -6,3 +6,24 @@ const users = [{
   nome: "Doge",
   imagem: "https://images-na.ssl-images-amazon.com/images/I/81-yKbVND-L._SY355_.png"
 }]
+
+//Eu tenho que criar duas div com a mesma cor e tamanho pra colocar as chaves que estão no Objeto acima.
+//Eu preciso indicar qual o indice que eu quero que apareça
+
+class Avatar{
+  constructor(usuario){
+    this.usuario = usuario
+  }
+  render(){
+    const avatar = `<div class="avatar green">
+    <img class = "img-rounded" src=${this.usuario.imagem} />
+    <h2> ${this.usuario.nome}</h2>
+    </div>`
+    document.getElementById('cards-section').insertAdjacentHTML('beforeend', avatar)
+  }
+}
+
+users.map((user) => {
+  new Avatar(user).render()
+})
+
