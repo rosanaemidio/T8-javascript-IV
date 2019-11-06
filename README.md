@@ -115,8 +115,6 @@ E ao final fizemos o processo de Pull Request pelo github
 - [Git flow - github](https://datasift.github.io/gitflow/IntroducingGitFlow.html)
 - [Git flow - gitlab](https://docs.gitlab.com/ee/workflow/gitlab_flow.html)
 - [Git flow - bitbucket](https://br.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
-<<<<<<< HEAD
-=======
 
 ## Aula 2
 #### Object
