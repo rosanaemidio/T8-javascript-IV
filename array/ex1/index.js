@@ -1,29 +1,20 @@
 let frutas = ["banana", "morango", "bacurí", "laranja"];
-let btn = document.getElementById('btn')
-let input = document.getElementById('input')
-let frutasMaiusculas = frutas.map(fruta => fruta.toUpperCase())
+let button = document.querySelector('#botao')
+let input = document.querySelector('#input')
 
 
-btn.addEventListener('click', function(){
-    // let arrAchou = frutas.filter(fruta => fruta === input.value)
-    // console.log(arrAchou)
-    // if(arrAchou.length > 0){
-    //     alert(`ACHOU O ${input.value}`)
-    // }else{
-    //     alert(`Não achou o ${input.value}`)
-    // }
+button.addEventListener("click", function( ){
+    let valorInput = input.value;
+    let listaFrutas = frutas.find((fruta) => fruta === valorInput);
+    
+    
+    if(listaFrutas){
+        console.log(listaFrutas)
+    }else {
+        alert(`Não achou o ${valorInput}`)
+    }
+    
 
-    // if(frutas.find(fruta => fruta === input.value)){
-    //     alert(`ACHOU O ${input.value}`)
-    // }else{
-    //     alert(`Não achou o ${input.value}`)
-    // }
-    console.log(typeof input.value)
-console.log(frutasMaiusculas)
 
-    if( frutasMaiusculas.indexOf(input.value.toUpperCase()) > -1){
-            alert(`ACHOU O ${input.value}`)
-        }else{
-            alert(`Não achou o ${input.value}`)
-        }
+
 })
