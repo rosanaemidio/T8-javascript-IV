@@ -5,10 +5,15 @@ const users = [{
 {
   nome: "Doge",
   imagem: "https://images-na.ssl-images-amazon.com/images/I/81-yKbVND-L._SY355_.png"
+},
+{
+  nome: "Antonio Banderas",
+  imagem: "https://answersafrica.com/wp-content/uploads/2019/06/antonio-banderas-640x441.jpg"
 }]
 
 //Eu tenho que criar duas div com a mesma cor e tamanho pra colocar as chaves que estão no Objeto acima.
 //Eu preciso indicar qual o indice que eu quero que apareça
+
 
 class Avatar{
   constructor(usuario){
@@ -26,4 +31,35 @@ class Avatar{
 users.map((user) => {
   new Avatar(user).render()
 })
+
+//   renderComCreate(){
+//     const avatarDiv = document.createElement('div')
+//     avatarDiv.setAttribute("class", "avatar green")
+//     const avatarImg = document.createElement('img')
+//     avatarImg.src = this.usuario.imagem
+//     avatarImg.setAttribute("class", "img-rounded")
+//     const avatarTitle = document.createElement('h2')
+//     avatarTitle.innerHTML = this.usuario.nome
+//     avatarDiv.appendChild(avatarImg)
+//     avatarDiv.appendChild(avatarTitle)
+//     document.getElementById('cards-section').appendChild(avatarDiv)
+//   }
+//   render() {
+//     const avatar = `<div class="avatar green">
+//         <img class="img-rounded" src=${this.usuario.imagem} />
+//         <h2>${this.usuario.nome}</h2>
+//       </div>`
+//       document.getElementById('cards-section').insertAdjacentHTML('beforeend', avatar)
+//   }
+// }
+
+// users.map((user, index) => {
+//   new Avatar(user).renderComCreate()
+// })
+// document.getElementById('cards-section').insertAdjacentHTML('beforeend', '<br/><br/>')
+
+// users.forEach((user) => {
+//   new Avatar(user).render()
+// })
+
 

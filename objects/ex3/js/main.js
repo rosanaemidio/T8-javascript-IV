@@ -26,10 +26,33 @@ let resultados = [
     }
 ];
 
-const renderNavbar = new NavBar
+
+const renderNavbar = new Navbar
 
 renderNavbar.render()
 
-resultados.map(resultado => {
-    new Card(resultado).render()
-}).join(" ")
+document.querySelector('.cards').innerHTML = 
+resultados.map(receita => {
+    return new Card(receita).render()
+}).join("")
+
+// resultados.map(receita => {
+//     document.querySelector('.cards').insertAdjacentHTML('beforeend', new Card(receita).render())
+// })
+
+// const searchPorTecla = (value) => {
+//     resultados.filter(receita => {
+//        console.log(receita.titulo.includes(value))
+//     })
+// }
+
+document.querySelector('.button__search').addEventListener('click', function(){
+    let inputValue = document.querySelector('.input__search').value.toUpperCase()
+    let achados = resultados.filter(receita => {
+        return receita.titulo.toUpperCase().includes(inputValue) || receita.ingredientes.toUpperCase().includes(inputValue)
+    })
+    //componente que já possui uma regra
+
+
+})
+
