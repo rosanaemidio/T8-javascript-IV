@@ -38,19 +38,17 @@ resultados.map(receita => {
 document.querySelector('.button__search').addEventListener('click', function(){
     let inputValue = document.querySelector('.input__search').value.toUpperCase()
     let achados = resultados.filter(receita => {
-        return receita.titulo.toUpperCase().includes(inputValue) || receita.ingredientes.toUpperCase().includes(inputValue)
-    })
-    //componente que já possui uma regra
-
-
-})
-
         // o meu inputValue está incluso em alguma parte do título OU dos ingredientes.
-//         return receita.titulo.toUpperCase().includes(inputValue) || receita.ingredientes.toUpperCase().includes(inputValue)
-//     })
+        return receita.titulo.toUpperCase().includes(inputValue) || receita.ingredientes.toUpperCase().includes(inputValue)
+    })//componente que já possui uma regra
+        document.querySelector('.cards').innerHTML = ""
+        achados.map(encontrado => {
+            new Card(encontrado).render()
+        })
+    })
+    
+    
 
-//     document.querySelector('.cards').innerHTML = ""
-//     achados.map(encontrado => {
-//         new Card(encontrado).render()
-//     })
-// })
+
+
+
