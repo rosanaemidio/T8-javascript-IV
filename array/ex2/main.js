@@ -29,7 +29,6 @@ const nomesNoRole =['Adriana',
 'Thaís',
 'Valdeniza']
 
-
 const validacao = (nome) => {
     if(nome.trim() === '') throw 'O campo está vazio'
 }
