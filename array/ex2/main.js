@@ -16,7 +16,11 @@ const nomesNoRole =['Adriana',
 'Lia',
 'Marcela',
 'Monique',
+<<<<<<< HEAD
+'Roiz',
+=======
 'Roiz Garcia',
+>>>>>>> e15601202b2af86028318ae2618b5197c636309e
 'Priscilla Soares Alves',
 'Raissa',
 'Raquel',
@@ -28,7 +32,6 @@ const nomesNoRole =['Adriana',
 'Telma',
 'Thaís',
 'Valdeniza']
-
 
 const validacao = (nome) => {
     if(nome.trim() === '') throw 'O campo está vazio'
