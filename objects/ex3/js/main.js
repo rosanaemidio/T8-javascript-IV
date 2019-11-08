@@ -40,10 +40,15 @@ document.querySelector('.button__search').addEventListener('click', function(){
     let achados = resultados.filter(receita => {
         // o meu inputValue está incluso em alguma parte do título OU dos ingredientes.
         return receita.titulo.toUpperCase().includes(inputValue) || receita.ingredientes.toUpperCase().includes(inputValue)
+    })//componente que já possui uma regra
+        document.querySelector('.cards').innerHTML = ""
+        achados.map(encontrado => {
+            new Card(encontrado).render()
+        })
     })
+    
+    
 
-    document.querySelector('.cards').innerHTML = ""
-    achados.map(encontrado => {
-        new Card(encontrado).render()
-    })
-})
+
+
+

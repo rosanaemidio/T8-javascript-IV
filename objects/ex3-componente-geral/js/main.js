@@ -45,6 +45,15 @@ const limpar = (value) => {
     }
 }
 
+carregaCards(resultados) //Chamo a função e passo o que ele vai receber como parâmetro
+
+const limpar = (value) =>{
+    if(!value){
+    
+        carregaCards(resultados)
+    }
+    // alert("funfa")
+}
 document.querySelector('.button__search').addEventListener('click', function(){
     let inputValue = document.querySelector('.input__search').value.toUpperCase()
     let achados = resultados.filter(receita => {
