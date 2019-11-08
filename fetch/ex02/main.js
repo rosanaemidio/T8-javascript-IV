@@ -22,14 +22,17 @@ cepInput.addEventListener("blur", ()=>{
             // ufInput.value.value = (json.uf)
             // ///façam aparecer os valores nos inputs
 // console.log(json)
+            ///façam aparecer os valores nos inputs
+            preencheInputs(json)
         })
     }
 })
 
-preencheInputs = objeto =>{
+
+preencheInputs = objeto => {
     logradouroInput.value = objeto.logradouro
+    complementoInput.value = objeto.complemento
     bairroInput.value = objeto.bairro
     localidadeInput.value = objeto.localidade
-    ufInput.value = objeto.ufInput   
+    ufInput.value = objeto.uf
 }
-:
