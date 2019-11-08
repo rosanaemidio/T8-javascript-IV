@@ -30,13 +30,19 @@ let resultados = [
 const renderNavbar = new Navbar
 
 renderNavbar.render()
-
-//Transformando o código mais limnpo criando uma função para toda vez que for usar o map
 const sectionCards = document.querySelector('.cards')
-const carregaCards = (arrayRecabido) => {
-    sectionCards.innerHTML = arrayRecabido.map(objeto => {
+const carregaCards = (arrayRecebido) => {
+    sectionCards.innerHTML = arrayRecebido.map(objeto => {
         return new Card(objeto).render()
-    }).join(" ")
+    }).join("")
+}
+
+carregaCards(resultados)
+
+const limpar = (value) => {
+    if(!value){
+        carregaCards(resultados)    
+    }
 }
 
 carregaCards(resultados) //Chamo a função e passo o que ele vai receber como parâmetro
@@ -55,7 +61,6 @@ document.querySelector('.button__search').addEventListener('click', function(){
         return receita.titulo.toUpperCase().includes(inputValue) || receita.ingredientes.toUpperCase().includes(inputValue)
     })
 
-    
     carregaCards(achados)
 })
 
